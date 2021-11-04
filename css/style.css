@@ -5,13 +5,14 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-
-
+}
+*:after, *:before{
+  box-sizing: border-box;
 }
 
 body {
-  font-family: "DM Sans", sans-serif;;
-  background-color: #F2F3FB;background-color: #F2F3FB;
+  font-family: "DM Sans", sans-serif;
+  background-color: #F2F3FB;
 }
 
 .container {
@@ -25,7 +26,7 @@ body {
 }
 
 h1{
-align-self: center;
+  align-self: center;
   padding-top: 1em;
 }
 
@@ -36,9 +37,9 @@ align-self: center;
   max-width: 425px;
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 10px 20px 0 rgba(#999, .25);
+  /*box-shadow: 0 10px 20px 0 rgb(#999, .25);*/
   padding: .75rem;
-  margin: 3em;
+  margin: 3em ;
 
 }
 
@@ -50,49 +51,73 @@ align-self: center;
 }
 
 .input-label {
-  color: #6658d3;
+  color: #8597a3;
+  position: absolute;
+  top: 1.5rem;
+  transition: .25s ease;
+
 
 }
 .input {
   display: flex;
-  flex-direction: column;
-  padding-bottom: 1em;
-  border-radius: 0;
-  padding: 1.5em;
+  flex-direction: column-reverse;
+  position: relative;
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
 
 }
 
 
 .input-field {
   border: 0;
-  border-bottom: 2px solid #6658d3;
+  z-index: 1;
   background-color: transparent;
-  font:inherit;
+  border-bottom: 2px solid #eee;
+  font: inherit;
   font-size: 1.125rem;
   padding: .25rem 0;
+}
+.input-field:valid,
+.input-field:focus {
+  border-bottom-color: #6658d3;
+  outline: 0;
+}
 
+.input-field:valid ~ .input-label,
+.input-field:focus ~ .input-label{
+  color: #6658d3;
+  transform: translateY(-1em);
 }
 
 button {
+  margin: 30px 0;
+  font: inherit;
   font-size: 1.25rem;
   padding: 1em;
-  margin: 0 auto 20px;
-  width: 95%;
+  width: 100%;
   font-weight: 500;
   background-color: #6658d3;
   border-radius: 6px;
   color: #FFF;
   border: 0;
-  cursor: pointer;
 }
 
 .img {
   border-radius: 10px;
   width: 100%;
-  margin: 0 auto;
-  text-align: center;
+  margin-right: 5%;
+
+
+
 }
 
 .container-img {
-  margin: 0 5%;
+overflow: hidden;
+}
+
+@media screen and (min-width: 900px) {
+  .container{
+    display: flexbox;
+    flex-wrap: nowrap ;
+  }
 }
