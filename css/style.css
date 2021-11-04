@@ -21,8 +21,7 @@ body {
   flex-wrap: wrap;
   align-items: center;
   min-height: 100vh;
-  min-width: 100vw;
-
+  margin: 0 5%;
 }
 
 h1{
@@ -37,9 +36,9 @@ h1{
   max-width: 425px;
   background-color: #fff;
   border-radius: 10px;
-  /*box-shadow: 0 10px 20px 0 rgb(#999, .25);*/
+  box-shadow: 0 10px 20px 0 rgba(#999, .25);
   padding: .75rem;
-  margin: 3em ;
+
 
 }
 
@@ -102,22 +101,28 @@ button {
   border: 0;
 }
 
+.container-img {
+ margin-left: 5%;
+}
+
 .img {
   border-radius: 10px;
   width: 100%;
-  margin-right: 5%;
+  margin: 0 auto;
+  }
 
-
-
-}
-
-.container-img {
-overflow: hidden;
-}
-
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
   .container{
     display: flexbox;
     flex-wrap: nowrap ;
+  }
+}
+
+@media screen and (max-width: 978px) {
+  .container-img{
+    margin: 5% 0;
+  }
+  .formulario-bg{
+    margin-top: 5%;
   }
 }
