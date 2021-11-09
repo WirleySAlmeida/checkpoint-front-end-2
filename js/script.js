@@ -13,21 +13,21 @@ titulo.addEventListener('mouseout', (evento) => {
 
 let nome = document.querySelector('#name')
 let paragraph = document.querySelector('#descricao')
+let figura = document.querySelector('#imagem');
 let btn = document.querySelector('#enviar')
 
+
 let newName = document.querySelector('h2')
-let NewParagraph = document.querySelector('p')
+let newParagraph = document.querySelector('p')
+let newImage = document.querySelector('img')
 
 
-btn.addEventListener('click', (Event) => {
+btn.addEventListener('click', (event) => {
   console.log("clicou no trem")
 
-  Event.preventDefault();
+  event.preventDefault();
 
   newName.innerHTML = `${nome.value}`;
-  NewParagraph.innerHTML = `${paragraph.value}`;
-
-
-
+  newParagraph.innerHTML = `${paragraph.value}`;
+  newImage.src = `${figura.value}`;
 })
-
