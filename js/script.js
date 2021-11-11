@@ -1,11 +1,13 @@
 let titulo = document.querySelector('h1')
+let body = document.querySelector('body');
+let footer = document.createElement('footer');
+let header = document.createElement('header');
 
 titulo.addEventListener('mouseover', colorChange);
 
 function colorChange(event) {
   titulo.style.color = 'tomato';
 }
-
 
 titulo.addEventListener('mouseout', (evento) => {
   titulo.style.color = 'black';
@@ -34,19 +36,20 @@ btn.addEventListener('click', (event) => {
 
   let nomes = nome.value;
   let descricao = paragraph.value;
-  let imgagem = figura.value;
+  let imagem = figura.value;
   let section = document.querySelector("#lista");
   let li = document.createElement("li");
   let p = document.createElement("p");
   let img = document.createElement('img');
   let h2 = document.createElement("h2");
   let src = document.createAttribute('src');
+  let titulo2 = document.querySelector('#titulo-2');
 
   // cria um objeto com as entradas de dados dos inputs
   var card = {
     nomeA: nomes,
     descricaoA: descricao,
-    imagemA: imgagem
+    imagemA: imagem
   }
 
   // recebe os valores
@@ -54,12 +57,15 @@ btn.addEventListener('click', (event) => {
   src.innerHTML = card.imagemA;
   h2.innerHTML = card.nomeA;
 
+  titulo2.innerHTML = "Lista de Animes";
+
   // adiciona os elementos no html dentro da div chamada de classe card
   img.setAttribute('src', card.imagemA);
   var div = document.createElement("div");
   div.appendChild(img);
   div.appendChild(h2)
   div.appendChild(p);
+
 
   // cria uma classe para o css dos cards
   div.classList.add('card');
@@ -70,3 +76,12 @@ btn.addEventListener('click', (event) => {
   // adiciona os itens na lista
   // section.appendChild(li);
 })
+
+let registra = document.createElement('p');
+
+registra.innerHTML = "Disciplina de Frontend II - 2021 - Todos os Direitos Reservados"
+registra.classList.add('texto');
+footer.appendChild(registra);
+
+footer.classList.add('foo');
+body.appendChild(footer);
