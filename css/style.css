@@ -113,9 +113,49 @@ button {
   border-radius: 10px;
   width: 100%;
   margin: 0 auto;
-
-
   }
+
+p {
+  margin: 10px;
+  padding-bottom: 20px;
+}
+
+img {
+  width: 70%;
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+h2 {
+  margin: 15px;
+  padding-top: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  border: solid black;
+  margin: 10px;
+  text-align: center;
+  align-items: center;
+  background: cornflowerblue;
+  transition: transform 0.5s ;
+}
+
+#lista {
+  margin-top: 20px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:hover{
+  box-shadow: rgb(248, 235, 235);
+  transform: scale(1.05);
+
+}
 
 @media screen and (min-width: 1000px) {
   .container{
@@ -130,5 +170,11 @@ button {
   }
   .formulario-bg{
     margin-top: 5%;
+  }
+}
+@media  screen and (min-width: 520px) {
+  .card {
+    margin: 20px;
+    width: 60%;
   }
 }
