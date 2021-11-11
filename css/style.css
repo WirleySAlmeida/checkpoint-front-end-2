@@ -103,6 +103,7 @@ button {
 
 .container-aside {
  margin-left: 5%;
+  width: 50%;
 }
 
 .container-img{
@@ -111,7 +112,7 @@ button {
 
 .img {
   border-radius: 10px;
-  width: 100%;
+  width: 70%;
   margin: 0 auto;
   }
 
@@ -121,7 +122,7 @@ p {
 }
 
 img {
-  width: 70%;
+  width: 50%;
   margin-top: 30px;
   border-radius: 10px;
 }
