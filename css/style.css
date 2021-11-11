@@ -101,6 +101,7 @@ button {
 
 .container-aside {
  margin-left: 5%;
+  width: 50%;
 }
 
 .container-img{
@@ -108,6 +109,7 @@ button {
 }
 
 .img {
+
   border-radius: 15px;
   width: 100%;
   margin: 0 auto;
@@ -119,7 +121,7 @@ p {
 }
 
 img {
-  width: 70%;
+  width: 50%;
   margin-top: 30px;
   border-radius: 10px;
 }
@@ -139,7 +141,11 @@ h2 {
   align-items: center;
   background: cornflowerblue;
   border-radius: 30px;
-  transition: transform 0.5s ;
+  /*border: solid black;*/
+  margin: 5px;
+  text-align: center;
+  align-items: center;
+  /*background: cornflowerblue;*/
   box-shadow: #6658d3;
   opacity: 0.9;
 }
